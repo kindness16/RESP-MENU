@@ -1,0 +1,110 @@
+body {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#609dc0), to(#9da9b3));
+  background: linear-gradient(#609dc0, #9da9b3);
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+header :hover {
+  color: #135ee9;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.burger {
+  display: none;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.menu a:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 0 0px 5px 5px;
+  border-bottom: 1px solid #135ee9;
+}
+
+@media (max-width: 576px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    background: #dad9d9;
+    line-height: 50px;
+    right: 0;
+    left: 0;
+    margin: 0;
+    height: 80vh;
+    padding: 0;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+  }
+  .menu a {
+    margin-left: 1rem;
+  }
+  .menu :hover {
+    background: blanchedalmond;
+  }
+  .burger {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    border-top: 1px solid black;
+    width: 20px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-top: 5px;
+    background: black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    position: relative;
+  }
+  .active {
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+    display: block;
+  }
+  .menu.active .burger {
+    border-top-color: transparent;
+  }
+}
+/*# sourceMappingURL=style.css.map */

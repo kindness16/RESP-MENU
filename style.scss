@@ -1,0 +1,87 @@
+body {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  background: linear-gradient(rgb(96, 157, 192), rgb(157, 169, 179));
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  :hover {
+    color: rgb(19, 94, 233);
+    transition: 0.7s;
+  }
+}
+.logo {
+  font-size: 28px;
+}
+.burger {
+  display: none;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  padding: 1rem;
+  a:hover {
+    transition: 0.4s;
+    border-radius: 0 0px 5px 5px;
+    border-bottom: 1px solid rgb(19, 94, 233);
+  }
+}
+@media (max-width: 576px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    background: rgb(218, 217, 217);
+    line-height: 50px;
+    right: 0;
+    left: 0;
+    margin: 0;
+    height: 80vh;
+    padding: 0;
+    transition: 0.9s;
+    a {
+      margin-left: 1rem;
+    }
+    :hover {
+      background: blanchedalmond;
+    }
+  }
+  .burger {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    border-top: 1px solid black;
+    width: 20px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-top: 5px;
+    background: black;
+    transition: 0.5s;
+    position: relative;
+  }
+  .active {
+    transition: 0.9s;
+    display: block;
+  }
+  .menu.active .burger {
+    border-top-color: transparent;
+  }
+}
